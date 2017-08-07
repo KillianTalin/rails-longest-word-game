@@ -1,0 +1,14 @@
+<% start_time = Time.now %>
+
+<div class="container text-center">
+<%= @grid %>
+  <form action="/score">
+    <div class="col-xs-4 col-xs-offset-4">
+      <label for="question">Enter your word</label>
+      <input type="hidden" name="time" value="<%= start_time %>">
+      <input type="hidden" name="grid" value="<%= @grid %>">
+      <input type="text" class="form-control" id="question" name="answer" placeholder="Enter your word here">
+      <input type="submit" value="Go on!" class= "btn btn-warning">
+    </div>
+  </form>
+</div>
